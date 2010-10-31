@@ -1,0 +1,28 @@
+End  User License Agreement
+
+
+NOTICE  TO USER:  THIS IS  A CONTRACT. BY INDICATING YOUR ACCEPTANCE BELOW, YOU ACCEPT  ALL THE TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT  AGREE WITH THE TERMS AND CONDITIONS OF THIS AGREEMENT, DECLINE  WHERE INSTRUCTED, AND YOU WILL NOT BE ABLE TO USE THE  SOFTWARE.
+
+ 
+This  Streambox, Inc ("Streambox") End User License  Agreement (the "Agreement") accompanies software  ("Software") and related explanatory written  materials ("Documentation"). The term  "Software" shall also include any upgrades, modified versions, updates, additions, and copies of the Software  licensed to you by Streambox. Streambox grants to you a  nonexclusive license to use the Software and Documentation,  provided that you agree to the following:
+
+
+
+1.              Use of the Software.
+
+ You  may install the Software in a single location on a hard disk  or other storage device of one computer and make one backup  copy of the Software, provided your backup copy is not  installed or used on any computer, if any.
+
+
+2.                 Copyright.  The  Software is owned by Streambox, and its structure,  organization and code are the valuable trade secrets of  Streambox. The Software is also protected by United States  Copyright Law and International Treaty provisions. You must  treat the Software just as you would any other copyrighted material. You may not copy the Software or the Documentation, except as set forth in the "Use of the Software"  section. Any copies that you are permitted to make pursuant to  this Agreement must contain the same copyright and other proprietary notices that appear on or in the Software. You  agree not to modify, adapt or translate the Software. You also  agree not to reverse engineer, decompile, disassemble or  otherwise attempt to discover the source code of the Software.  Trademarks shall be used in accordance with accepted trademark  practice, including identification of trademark owner's name.  Trademarks can only be used to identify printed output  produced by the Software. Such use of any trademark does not  give you any rights of ownership in that trademark. Except as  stated above, this Agreement does not grant you any  intellectual property rights in the Software.
+
+ 
+
+3.              No warranty.  Streambox  does not warrant, guarantee or make any representations that  the operation of the software will be uninterrupted or  error-free. Any other software and any hardware furnished with  or accompanying the software is not warranted by Streambox.
+
+ 
+
+4.                 Limitation of Liability.   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING,  BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTIBILITY  AND FITNESS FOR A PARTICULAR PURPOSE, OR OF ANY OTHER TYPE,  WHETHER EXPRESS OR IMPLIED, AND TO ANY REMEDY AGAINST STREAMBOX, WHETHER IN CONTRACT, TORT, DELICT, QUASI-DELICT OR  OTHERWISE. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN IMPLIED WARRANTIES SO THE PRECEDING EXCLUSIONS MAY NOT APPLY. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL STREAMBOX BE LIABLE FOR ANY SPECIAL,  CONSEQUENTIAL, INCIDENTAL OR DIRECT OR INDIRECT DAMAGES,  INCLUDING WITHOUT LIMITATION LOSS OF PROFIT, ARISING OUT OF LICENSEE'S USE OR INABILITY TO USE THE SOFTWARE OR DOCUMENTATION ACCOMPANYING IT, WHETHER OR NOT STREAMBOX HAVE  BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS, HOWEVER CAUSED  AND ON ANY THEORY OF LIABILITY. THIS EXCLUSION INCLUDES ANY  LIABILITY THAT MAY ARISE OUT OF THIRD-PARTY CLAIMS AGAINST  LICENSEE.
+
+ 
+
+5.                 Governing Law and General Provisions.   This Agreement will be governed by the laws in force in  the State of Washington excluding the application of its  conflicts of law rules. This Agreement will not be governed by the United Nations Convention on Contracts for the International Sale of Goods, the application of which is  expressly excluded. If any part of this Agreement is found void and unenforceable, it will not affect the validity of the balance of the Agreement, which shall remain valid and enforceable according to its terms. You agree that the Software will not be shipped, transferred or exported into any country or used in any manner prohibited by the United States Export Administration Act or any other export laws, restrictions or regulations. This Agreement shall automatically terminate upon failure by you to comply with its terms. This Agreement may only be modified in writing signed by an authorized officer of Streambox.
