@@ -1,28 +1,38 @@
-End  User License Agreement
 
+			STREAMBOX, INC.
+		  END USER LICENSE AGREEMENT
 
-NOTICE  TO USER:  THIS IS  A CONTRACT. BY INDICATING YOUR ACCEPTANCE BELOW, YOU ACCEPT  ALL THE TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT  AGREE WITH THE TERMS AND CONDITIONS OF THIS AGREEMENT, DECLINE  WHERE INSTRUCTED, AND YOU WILL NOT BE ABLE TO USE THE  SOFTWARE.
+NOTICE TO ALL USERS: PLEASE CAREFULLY READ THE FOLLOWING LEGAL AGREEMENT (“AGREEMENT”) FOR THE LICENSE OF CERTAIN SOFTWARE BY STREAMBOX, INC. (“STREAMBOX”). BY CLICKING THE ACCEPT BUTTON OR INSTALLING THE SOFTWARE, YOU (EITHER AN INDIVIDUAL OR A SINGLE ENTITY) CONSENT TO BE BOUND BY AND BECOME A PARTY TO THIS AGREEMENT. IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS AGREEMENT, CLICK THE BUTTON THAT INDICATES THAT YOU DO NOT ACCEPT THE TERMS OF THIS AGREEMENT AND DO NOT INSTALL THE SOFTWARE. (IF APPLICABLE, YOU MAY RETURN THE PRODUCT TO THE PLACE OF PURCHASE FOR A FULL REFUND.)
 
- 
-This  Streambox, Inc ("Streambox") End User License  Agreement (the "Agreement") accompanies software  ("Software") and related explanatory written  materials ("Documentation"). The term  "Software" shall also include any upgrades, modified versions, updates, additions, and copies of the Software  licensed to you by Streambox. Streambox grants to you a  nonexclusive license to use the Software and Documentation,  provided that you agree to the following:
+1. 	OVERVIEW.  These license terms permit installation and use of one copy of Streambox Store and Forward Client (the “software”) on one device, along with other rights, all as described below.
 
+2. 	INSTALLATION AND USE RIGHTS.  Before you use the software under a license, you must assign that license to one device.  That device is the “licensed device.”  A hardware partition or blade is considered to be a separate device.  The single primary user of the licensed device may access and use the software installed on the licensed device remotely from any other device.  No other person may use the software under the same license at the same time for any other purpose.
 
+3.	SCOPE OF LICENSE.  The software is licensed, not sold. This agreement only gives you some rights to use the software.  Streambox reserves all other rights.  Unless applicable law gives you more rights despite this limitation, you may use the software only as expressly permitted in this agreement.  In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways.  You may not:
+	• work around any technical limitations in the software;
+	• reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits, despite this limitation;
+	• make more copies of the software than specified in this agreement or allowed by applicable law, despite this limitation;
+	• publish the software for others to copy;
+	• use the software in any way that is against the law;
+	• rent, lease or lend the software; or
+	• use the software for commercial software hosting services.
 
-1.              Use of the Software.
+4.	BACKUP COPY.  You may make one backup copy of the media.  You may use it only to reinstall the software.
 
- You  may install the Software in a single location on a hard disk  or other storage device of one computer and make one backup  copy of the Software, provided your backup copy is not  installed or used on any computer, if any.
+5.	REASSIGN TO ANOTHER DEVICE.  You may reassign the license to a different device any number of times, but not more than one time every 90 days.  If you reassign, that other device becomes the “licensed device.”  If you retire the licensed device due to hardware failure, you may reassign the license sooner.
 
+6.	TRANSFER TO A THIRD PARTY.  This software may not be transferred to a third party without the express written consent of Streambox.  
 
-2.                 Copyright.  The  Software is owned by Streambox, and its structure,  organization and code are the valuable trade secrets of  Streambox. The Software is also protected by United States  Copyright Law and International Treaty provisions. You must  treat the Software just as you would any other copyrighted material. You may not copy the Software or the Documentation, except as set forth in the "Use of the Software"  section. Any copies that you are permitted to make pursuant to  this Agreement must contain the same copyright and other proprietary notices that appear on or in the Software. You  agree not to modify, adapt or translate the Software. You also  agree not to reverse engineer, decompile, disassemble or  otherwise attempt to discover the source code of the Software.  Trademarks shall be used in accordance with accepted trademark  practice, including identification of trademark owner's name.  Trademarks can only be used to identify printed output  produced by the Software. Such use of any trademark does not  give you any rights of ownership in that trademark. Except as  stated above, this Agreement does not grant you any  intellectual property rights in the Software.
+7.	EXPORT RESTRICTIONS.  The software is subject to United States export laws and regulations.  You must comply with all domestic and international export laws and regulations that apply to the software.  These laws include restrictions on destinations, end users and end use.  
 
- 
+8.	ENTIRE AGREEMENT.  This agreement (including the warranty below), any addendum or amendment included with the software, and the terms for supplements, updates, and support services that you use, are the entire agreement for the software and support services.
 
-3.              No warranty.  Streambox  does not warrant, guarantee or make any representations that  the operation of the software will be uninterrupted or  error-free. Any other software and any hardware furnished with  or accompanying the software is not warranted by Streambox.
+9.	APPLICABLE LAW AND VENUE. Washington state law governs the interpretation of this agreement and applies to claims for breach of it, regardless of conflict of laws principles.  Venue for any dispute arising out of or related to this agreement or the software shall be in the state or federal courts located in King County, Washington.
 
- 
+10.	DISCLAIMER OF WARRANTY.  THE SOFTWARE IS PROVIDED ON AN “AS IS” BASIS, AND THERE ARE NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTY OF MERCHANTABILITY, ACCURACY OF INFORMATIONAL CONTENT OR FITNESS FOR A PARTICULAR PURPOSE.  THERE IS NO WARRANTY AGAINST INFRINGEMENT OF ANY INTELLECTUAL PROPERTY RIGHTS OF ANOTHER. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED OR LIMITATIONS ON APPLICABLE STATUTORY RIGHTS OF A CONSUMER, SO THE ABOVE EXCLUSION AND LIMITATIONS MAY NOT APPLY TO YOU.
 
-4.                 Limitation of Liability.   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING,  BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTIBILITY  AND FITNESS FOR A PARTICULAR PURPOSE, OR OF ANY OTHER TYPE,  WHETHER EXPRESS OR IMPLIED, AND TO ANY REMEDY AGAINST STREAMBOX, WHETHER IN CONTRACT, TORT, DELICT, QUASI-DELICT OR  OTHERWISE. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN IMPLIED WARRANTIES SO THE PRECEDING EXCLUSIONS MAY NOT APPLY. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL STREAMBOX BE LIABLE FOR ANY SPECIAL,  CONSEQUENTIAL, INCIDENTAL OR DIRECT OR INDIRECT DAMAGES,  INCLUDING WITHOUT LIMITATION LOSS OF PROFIT, ARISING OUT OF LICENSEE'S USE OR INABILITY TO USE THE SOFTWARE OR DOCUMENTATION ACCOMPANYING IT, WHETHER OR NOT STREAMBOX HAVE  BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS, HOWEVER CAUSED  AND ON ANY THEORY OF LIABILITY. THIS EXCLUSION INCLUDES ANY  LIABILITY THAT MAY ARISE OUT OF THIRD-PARTY CLAIMS AGAINST  LICENSEE.
+11.	LIMITATION OF LIABILITY.  IN NO EVENT SHALL STREAMBOX BE LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY KIND, REGARDLESS OF THE FORM OF THE ACTION, ARISING OUT OF OR RELATED TO THIS LICENSE AGREEMENT OR THE PERFORMANCE OF BREACH THEREOF, EVEN IF STREAMBOX HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  IN NO EVENT SHALL STREAMBOX BE LIABLE FOR ANY DAMAGES RESULTING FROM OR RELATED TO THE FAILURE OF THE SOFTWARE, INCLUDING, BUT NOT LIMITED TO, LOST DATA, HARDWARE FAILURE, PROFITS, OR THIRD PARTY LIABILITY.  
 
- 
+Some states do not allow the exclusion or limitation of incidental or consequential damages, so the above limitation or exclusion may not apply to you.  
 
-5.                 Governing Law and General Provisions.   This Agreement will be governed by the laws in force in  the State of Washington excluding the application of its  conflicts of law rules. This Agreement will not be governed by the United Nations Convention on Contracts for the International Sale of Goods, the application of which is  expressly excluded. If any part of this Agreement is found void and unenforceable, it will not affect the validity of the balance of the Agreement, which shall remain valid and enforceable according to its terms. You agree that the Software will not be shipped, transferred or exported into any country or used in any manner prohibited by the United States Export Administration Act or any other export laws, restrictions or regulations. This Agreement shall automatically terminate upon failure by you to comply with its terms. This Agreement may only be modified in writing signed by an authorized officer of Streambox.
+THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY ALSO HAVE OTHER RIGHTS WHICH VARY FROM STATE TO STATE.  
