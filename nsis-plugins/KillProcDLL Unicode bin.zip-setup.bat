@@ -7,3 +7,5 @@ mkdir "%stage%"
 
 :: http://nsis.sourceforge.net/XML_plug-in
 copy /y "%stage%\KillProcDLL.dll" "%programfiles%\NSIS\Plugins"
+
+rmdir /q/s "%stage%"
