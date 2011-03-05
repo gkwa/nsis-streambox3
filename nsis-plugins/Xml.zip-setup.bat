@@ -6,4 +6,4 @@ mkdir Xml-odXihBhRVpA4
 
 :: http://nsis.sourceforge.net/XML_plug-in
 copy /y Xml-odXihBhRVpA4\Include "%programfiles%\NSIS\Include"
-copy /y Xml-odXihBhRVpA4\Plugin  "%programfiles%\NSIS\Plugin"
+copy /y Xml-odXihBhRVpA4\Plugin  "%programfiles%\NSIS\Plugins"
