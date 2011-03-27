@@ -1,13 +1,22 @@
 REM -*- bat -*-
 @Echo on
+:: http://nsis.sourceforge.net/XML_plug-in
 
-set stage=Xml-odXihBhRVpA4
+set stage=%cd%\Xml-odXihBhRVpA4
 
 mkdir %stage%
-.\unzip -q -n Xml.zip -d %stage%
+.\unzip -q -n Xml.zip -d "%stage%"
 
-:: http://nsis.sourceforge.net/XML_plug-in
-copy /y %stage%\Include "%programfiles%\NSIS\Unicode\Include"
-copy /y %stage%\Plugin  "%programfiles%\NSIS\Unicode\Plugins"
+cd "%programfiles%\NSIS"
 
-rmdir /q/s %stage%
+if exist Unicode\Plugins\nul (
+   copy /y "%stage%\Include" "%programfiles%\NSIS\Unicode\Include"
+   copy /y "%stage%\Plugin"  "%programfiles%\NSIS\Unicode\Plugins"
+)
+
+if exist Plugins\nul (
+   copy /y "%stage%\Include" "%programfiles%\NSIS\Include"
+   copy /y "%stage%\Plugin"  "%programfiles%\NSIS\Plugins"
+)
+
+rmdir /q/s "%stage%"

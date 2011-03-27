@@ -1,11 +1,22 @@
 REM -*- bat -*-
 @Echo on
 
-set stage=FindProcDLL Unicode bin-odXihBhRVpA4
+set zip=FindProcDLL Unicode bin.zip
+
+set stage=%cd%\FindProcDLL Unicode bin-odXihBhRVpA4
 mkdir "%stage%"
-.\unzip -q -n "FindProcDLL Unicode bin.zip" -d "%stage%"
+.\unzip -q -n "%zip%" -d "%stage%"
 
 :: http://nsis.sourceforge.net/XML_plug-in
-copy /y "%stage%\FindProcDLL.dll" "%programfiles%\NSIS\Unicode\Plugins"
+
+cd "%programfiles%\NSIS"
+
+if exist Unicode\Plugins\nul (
+	copy /y "%stage%\FindProcDLL.dll" "%programfiles%\NSIS\Unicode\Plugins"
+)
+
+if exist Plugins\nul (
+	copy /y "%stage%\FindProcDLL.dll" "%programfiles%\NSIS\Plugins"
+)
 
 rmdir /q/s "%stage%"

@@ -1,4 +1,4 @@
-@Echo off
+@Echo on
 REM -*- bat -*-
 
 curl -O http://installer-bin.streambox.com/7za.exe
@@ -13,12 +13,17 @@ rem http://code.google.com/p/unsis
 
 :: usage cmd /c setup.bat
 
-if not exist "%programfiles%\NSIS\NUL" ( 
-   echo installing nsis
-   cmd /c nsis-2.46-Unicode-setup.exe /S 
-)
 
-copy /y pathman.exe %systemroot%\system32
-pathman /au "%systemdrive%\Program Files\NSIS\Unicode"
+set f=nsis-2.46-setup.exe
+cmd /c %f% /S 
 
+set f=nsis-2.46-Unicode-setup.exe
+cmd /c %f% /S 
 
+.\pathman /ru "%systemdrive%\Program Files\NSIS"
+.\pathman /ru "%systemdrive%\Program Files\NSIS\Unicode"
+
+cd nsis-plugins
+cmd /c setup.bat
+
+cmd /k "reg query hkcu\environment /v Path"

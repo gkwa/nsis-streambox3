@@ -1,8 +1,13 @@
 REM -*- bat -*-
 @Echo on
 
-set stage=Advunlog-odXihBhRVpA4
-mkdir "%stage%"
-.\unzip -q -n "Advunlog.zip" -d "%stage%"
+set zip=Advunlog.zip
+set stage=%cd%\Advunlog-odXihBhRVpA4
 
-cmd /c "%stage%\install.exe"
+mkdir "%stage%"
+.\unzip -q -n "%zip%" -d "%stage%"
+
+cmd /c "%stage%\install.exe /S"
+
+
+rmdir /q /s "%stage%"
