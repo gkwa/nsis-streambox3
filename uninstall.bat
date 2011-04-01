@@ -7,3 +7,5 @@ cd Unicode
 uninst-nsis.exe /S
 
 rmdir /q/s "%programfiles%\NSIS"
+
+explorer "%programfiles%"

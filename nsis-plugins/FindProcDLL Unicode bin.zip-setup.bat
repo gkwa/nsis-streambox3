@@ -15,8 +15,8 @@ if exist Unicode\Plugins\nul (
 	copy /y "%stage%\FindProcDLL.dll" "%programfiles%\NSIS\Unicode\Plugins"
 )
 
-if exist Plugins\nul (
-	copy /y "%stage%\FindProcDLL.dll" "%programfiles%\NSIS\Plugins"
-)
+REM if exist Plugins\nul (
+REM 	copy /y "%stage%\FindProcDLL.dll" "%programfiles%\NSIS\Plugins"
+REM )
 
 rmdir /q/s "%stage%"
