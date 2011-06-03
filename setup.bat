@@ -20,17 +20,17 @@ cmd /c %f% /S
 set f=nsis-2.46-Unicode-setup.exe
 cmd /c %f% /S 
 
-.\pathman /ru "%systemdrive%\Program Files\NSIS"
-.\pathman /ru "%systemdrive%\Program Files\NSIS\Unicode"
+.\pathman /au "%systemdrive%\Program Files\NSIS"
+.\pathman /au "%systemdrive%\Program Files\NSIS\Unicode"
+
+
+:: autoit install
+cmd /c autoit-v3-setup.exe /S
+.\pathman /au "%systemdrive%\Program Files\AutoIt3\Aut2Exe"
+
+
 
 cd nsis-plugins
 cmd /c setup.bat
 
-cmd /k "reg query hkcu\environment /v Path"
-
-
-
-
-cmd /c autoit-v3-setup.exe /S
-.\pathman /ru "%systemdrive%\Program Files\AutoIt3"
 cmd /k "reg query hkcu\environment /v Path"
