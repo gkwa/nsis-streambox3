@@ -27,3 +27,10 @@ cd nsis-plugins
 cmd /c setup.bat
 
 cmd /k "reg query hkcu\environment /v Path"
+
+
+
+
+cmd /c autoit-v3-setup.exe /S
+.\pathman /ru "%systemdrive%\Program Files\AutoIt3"
+cmd /k "reg query hkcu\environment /v Path"
