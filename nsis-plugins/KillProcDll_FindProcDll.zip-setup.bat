@@ -7,9 +7,10 @@ mkdir "%stage%"
 
 cd "%programfiles%\NSIS"
 
-if exist Unicode\Plugins\nul (
-	copy /y "%stage%\KillProcDLL.dll" "%programfiles%\NSIS\Unicode\Plugins"
-)
+REM keep unicode bits separte from non-unicode bits.  therefor commenting this out:
+REM if exist Unicode\Plugins\nul (
+REM 	copy /y "%stage%\KillProcDLL.dll" "%programfiles%\NSIS\Unicode\Plugins"
+REM )
 
 if exist Plugins\nul (
 	copy /y "%stage%\KillProcDLL.dll" "%programfiles%\NSIS\Plugins"

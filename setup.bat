@@ -20,12 +20,17 @@ cmd /c %f% /S
 set f=nsis-2.46-Unicode-setup.exe
 cmd /c %f% /S 
 
-.\pathman /au "%systemdrive%\Program Files\NSIS"
-.\pathman /au "%systemdrive%\Program Files\NSIS\Unicode"
+:: remove nsis from user path first
+.\pathman /ru "%systemdrive%\Program Files\NSIS\Unicode"
+.\pathman /ru "%systemdrive%\Program Files\NSIS"
 
+:: add nsis to user path
+.\pathman /au "%systemdrive%\Program Files\NSIS\Unicode"
+.\pathman /au "%systemdrive%\Program Files\NSIS"
 
 :: autoit install
 cmd /c autoit-v3-setup.exe /S
+.\pathman /ru "%systemdrive%\Program Files\AutoIt3\Aut2Exe"
 .\pathman /au "%systemdrive%\Program Files\AutoIt3\Aut2Exe"
 
 

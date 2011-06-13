@@ -11,6 +11,7 @@ mkdir "%stage%"
 
 cd "%programfiles%\NSIS"
 
+REM keep unicode bits separte from non-unicode bits.  therefore commenting this out:
 REM if exist Unicode\Plugins\nul (
 REM 	copy /y "%stage%\FindProcDLL.dll" "%programfiles%\NSIS\Unicode\Plugins"
 REM )

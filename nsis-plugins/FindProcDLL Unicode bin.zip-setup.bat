@@ -7,8 +7,6 @@ set stage=%cd%\FindProcDLL Unicode bin-odXihBhRVpA4
 mkdir "%stage%"
 .\unzip -q -n "%zip%" -d "%stage%"
 
-:: http://nsis.sourceforge.net/XML_plug-in
-
 cd "%programfiles%\NSIS"
 
 if exist Unicode\Plugins\nul (
