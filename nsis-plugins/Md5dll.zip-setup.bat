@@ -10,7 +10,7 @@ mkdir "%stage%"
 cd "%programfiles%\NSIS"
 
 if exist Unicode\Plugins\nul (
-	copy /y "%stage%\md5dll\ANSI\md5dll.dll" "%programfiles%\NSIS\Unicode\Plugins"
+	copy /y "%stage%\md5dll\UNICODE\md5dll.dll" "%programfiles%\NSIS\Unicode\Plugins"
 )
 
 if exist Plugins\nul (
