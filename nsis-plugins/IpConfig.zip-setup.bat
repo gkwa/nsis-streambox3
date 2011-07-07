@@ -23,4 +23,4 @@ if exist Plugins\nul (
 	%r% /e "%stage%\Docs" "%programfiles%\NSIS\Docs"
 )
 
-:: rmdir /q/s "%stage%"
+rmdir /q/s "%stage%"
