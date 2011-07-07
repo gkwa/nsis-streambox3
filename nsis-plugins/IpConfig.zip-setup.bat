@@ -1,5 +1,6 @@
 REM -*- bat -*-
 @Echo on
+set r=%cd%\..\robocopy.exe
 
 set zip=IpConfig.zip
 
@@ -9,16 +10,17 @@ mkdir "%stage%"
 
 cd "%programfiles%\NSIS"
 
+
 if exist Unicode\Plugins\nul (
 	copy /y "%stage%\Unicode\Plugins\IpConfig.dll" "%programfiles%\NSIS\Unicode\Plugins"
-	copy /y "%stage%\Examples" "%programfiles%\NSIS\Unicode\Examples"
-	copy /y "%stage%\Docs" "%programfiles%\NSIS\Unicode\Docs"
+	%r% /e "%stage%\Examples" "%programfiles%\NSIS\Unicode\Examples"
+	%r% /e "%stage%\Docs" "%programfiles%\NSIS\Unicode\Docs"
 )
 
 if exist Plugins\nul (
 	copy /y "%stage%\Plugins\IpConfig.dll" "%programfiles%\NSIS\Plugins"
-	copy /y "%stage%\Examples" "%programfiles%\NSIS\Examples"
-	copy /y "%stage%\Docs" "%programfiles%\NSIS\Docs"
+	%r% /e "%stage%\Examples" "%programfiles%\NSIS\Examples"
+	%r% /e "%stage%\Docs" "%programfiles%\NSIS\Docs"
 )
 
-rmdir /q/s "%stage%"
+:: rmdir /q/s "%stage%"
