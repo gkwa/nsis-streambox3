@@ -150,7 +150,6 @@ $\r$\n\
 		pop $0
 		sleep 2000
 		
-		
 		# just to be sure, run cmd.exe kill again!
 		DetailPrint "Searching for process 'cmd.exe'"
 		FindProcDLL::FindProc "cmd.exe"
@@ -173,6 +172,14 @@ $\r$\n\
 		IntCmp $R0 1 0 +5
 		DetailPrint "Stopping Streambox Transport3D.exe application"
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM Transport3D.exe'
+		Pop $0
+		sleep 2000
+
+		DetailPrint "Searching for process 'Transcoder.exe'"
+		FindProcDLL::FindProc "Transcoder.exe"
+		IntCmp $R0 1 0 +5
+		DetailPrint "Stopping Streambox Transcoder.exe application"
+		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM Transcoder.exe'
 		Pop $0
 		sleep 2000
 		
