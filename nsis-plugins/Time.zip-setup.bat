@@ -20,12 +20,12 @@ if exist Include\nul (
 
 if exist Unicode\Plugins\nul (
 	copy /y "%stage%\Plugin\time.dll" "%programfiles%\NSIS\Unicode\Plugins"
-	%r% /e "%stage%\Example\TimeTest.nsi" "%programfiles%\NSIS\Unicode\Examples"
+	%r% /e "%stage%\Example" "%programfiles%\NSIS\Unicode\Examples" TimeTest.nsi
 )
 
 if exist Plugins\nul (
 	copy /y "%stage%\Plugin\time.dll" "%programfiles%\NSIS\Plugins"
-	%r% /e "%stage%\Example\TimeTest.nsi" "%programfiles%\NSIS\Examples"
+	%r% /e "%stage%\Example" "%programfiles%\NSIS\Examples" TimeTest.nsi
 )
 
 rmdir /q/s "%stage%"
