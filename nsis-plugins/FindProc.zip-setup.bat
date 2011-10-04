@@ -1,13 +1,12 @@
 REM -*- bat -*-
 @Echo on
 
-set zip=FindProc.zip
-
+set plugin=FindProc
+set zip=%plugin%.zip
 set stage=%cd%\%zip%-odXihBhRVpA4
+
 mkdir "%stage%"
 .\unzip -q -n "%zip%" -d "%stage%"
-
-:: http://nsis.sourceforge.net/XML_plug-in
 
 cd "%programfiles%\NSIS"
 

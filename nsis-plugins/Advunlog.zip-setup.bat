@@ -1,7 +1,8 @@
 REM -*- bat -*-
 @Echo on
 
-set zip=Advunlog.zip
+set plugin=Advunlog
+set zip=%plugin%.zip
 set stage=%cd%\%zip%-odXihBhRVpA4
 
 mkdir "%stage%"
@@ -9,11 +10,7 @@ mkdir "%stage%"
 
 cd "%programfiles%\NSIS"
 
-if exist Unicode\Include\nul (
-	copy /y "%stage%\Include\AdvUninstLog.nsh" "%programfiles%\NSIS\Unicode\Include"
-)
-if exist Include\nul (
-	copy /y "%stage%\Include\AdvUninstLog.nsh" "%programfiles%\NSIS\Include"
-)
+if exist Plugins\nul ( robocopy "%stage%" "%programfiles%\NSIS" /e /s )
+if exist Unicode\nul ( robocopy "%stage%" "%programfiles%\NSIS\Unicode" /e /s )
 
 rmdir /q/s "%stage%"
