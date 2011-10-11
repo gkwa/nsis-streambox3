@@ -1,7 +1,8 @@
 REM -*- bat -*-
 @Echo on
 
-set zip=Nsislog.zip
+set plugin=Nsislog
+set zip=%plugin%.zip
 set stage=%cd%\%zip%-odXihBhRVpA4
 
 mkdir "%stage%"

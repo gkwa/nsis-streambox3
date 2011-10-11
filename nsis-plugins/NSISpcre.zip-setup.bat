@@ -1,7 +1,8 @@
 REM -*- bat -*-
 @Echo on
 
-set zip=NSISpcre.zip
+set plugin=NSISpcre
+set zip=%plugin%.zip
 set stage=%cd%\%zip%-odXihBhRVpA4
 
 mkdir "%stage%"

@@ -1,9 +1,10 @@
 REM -*- bat -*-
 @Echo on
 
-set zip=Md5dll.zip
-
+set plugin=Md5dll
+set zip=%plugin%.zip
 set stage=%cd%\%zip%-odXihBhRVpA4
+
 mkdir "%stage%"
 .\unzip -q -n "%zip%" -d "%stage%"
 

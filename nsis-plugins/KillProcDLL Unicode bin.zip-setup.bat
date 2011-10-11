@@ -1,7 +1,11 @@
 REM -*- bat -*-
 @Echo on
 
-set stage=%cd%\KillProcDLL Unicode bin-odXihBhRVpA4
+set plugin=KillProcDLL Unicode bin
+set zip=%plugin%.zip
+set stage=%cd%\%zip%-odXihBhRVpA4
+
+
 mkdir "%stage%"
 .\unzip -q -n "KillProcDLL Unicode bin.zip" -d "%stage%"
 

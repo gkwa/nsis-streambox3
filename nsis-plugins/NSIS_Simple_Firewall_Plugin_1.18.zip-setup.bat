@@ -1,7 +1,10 @@
 REM -*- bat -*-
 @Echo on
 
-set stage=%cd%\NSIS_Simple_Firewall_Plugin_1.18-odXihBhRVpA4
+set plugin=NSIS_Simple_Firewall_Plugin_1.18
+set zip=%plugin%.zip
+set stage=%cd%\%zip%-odXihBhRVpA4
+
 mkdir "%stage%"
 .\unzip -q -n NSIS_Simple_Firewall_Plugin_1.18.zip -d "%stage%"
 

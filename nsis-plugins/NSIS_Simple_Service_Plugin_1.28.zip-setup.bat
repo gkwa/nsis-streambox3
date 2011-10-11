@@ -1,7 +1,10 @@
 REM -*- bat -*-
 @Echo on
 
-set stage=%cd%\NSIS_Simple_Service_Plugin_1.28-odXihBhRVpA4
+set plugin=NSIS_Simple_Service_Plugin_1.28
+set zip=%plugin%.zip
+set stage=%cd%\%zip%-odXihBhRVpA4
+
 mkdir "%stage%"
 .\unzip -q -n NSIS_Simple_Service_Plugin_1.28.zip -d "%stage%"
 

@@ -1,10 +1,11 @@
 REM -*- bat -*-
 @Echo on
+
+set plugin=IpConfig
+set zip=%plugin%.zip
+set stage=%cd%\%zip%-odXihBhRVpA4
 set r=%cd%\..\robocopy.exe
 
-set zip=IpConfig.zip
-
-set stage=%cd%\%zip%-odXihBhRVpA4
 mkdir "%stage%"
 .\unzip -q -n "%zip%" -d "%stage%"
 

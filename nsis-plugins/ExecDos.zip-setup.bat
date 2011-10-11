@@ -1,10 +1,11 @@
 REM -*- bat -*-
 @Echo on
+
+set plugin=ExecDos
+set zip=%plugin%.zip
+set stage=%cd%\%zip%-odXihBhRVpA4
 set r=%cd%\..\robocopy.exe
 
-set zip=ExecDos.zip
-
-set stage=%cd%\%zip%-odXihBhRVpA4
 mkdir "%stage%"
 .\unzip -q -n "%zip%" -d "%stage%"
 

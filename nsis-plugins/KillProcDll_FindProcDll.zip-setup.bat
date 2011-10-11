@@ -1,7 +1,10 @@
 REM -*- bat -*-
 @Echo on
 
-set stage=%cd%\KillProcDll_FindProcDll-odXihBhRVpA4
+set plugin=KillProcDll_FindProcDll
+set zip=%plugin%.zip
+set stage=%cd%\%zip%-odXihBhRVpA4
+
 mkdir "%stage%"
 .\unzip -q -n "KillProcDll_FindProcDll.zip" -d "%stage%"
 
