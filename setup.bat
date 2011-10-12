@@ -15,10 +15,10 @@ rem http://code.google.com/p/unsis
 
 
 set f=nsis-2.46-setup.exe
-cmd /c %f% /S 
+cmd /c %f% /S
 
 set f=nsis-2.46-Unicode-setup.exe
-cmd /c %f% /S 
+cmd /c %f% /S
 
 :: remove nsis from user path first
 rem .\pathman /ru "%systemdrive%\Program Files\NSIS\Unicode"

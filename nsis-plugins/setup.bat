@@ -1,6 +1,5 @@
 REM -*- bat -*-
 @Echo on
-
 set home=%cd%
 
 cmd /c Md5dll.zip-setup.bat
@@ -19,4 +18,3 @@ cmd /c EnumINI.zip-setup.bat
 cmd /c IpConfig.zip-setup.bat
 cmd /c Time.zip-setup.bat
 cmd /c ExecDos.zip-setup.bat
-
