@@ -18,4 +18,4 @@ cmd /c EnumINI.zip-setup.bat
 cmd /c IpConfig.zip-setup.bat
 cmd /c Time.zip-setup.bat
 cmd /c ExecDos.zip-setup.bat
-cmd /c NsProcess.zip-setup.bat
+cmd /c nsProcess_1_6.7z-setup.bat
