@@ -10,7 +10,7 @@ set r=%cd%\..\robocopy.exe
 
 # fix nsProcess_1_6.7z directory name to match nsis Examples dir (instead of Example)
 move "%stage%\Example" "%stage%\Examples"
-
+move "%stage%\Plugin" "%stage%\Plugins"
 
 cd "%programfiles%\NSIS"
 
