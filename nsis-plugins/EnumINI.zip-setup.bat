@@ -1,7 +1,7 @@
 REM -*- bat -*-
 @Echo on
 
-set plugin=EnumINI.zip
+set plugin=EnumINI
 set zip=%plugin%.zip
 set stage=%cd%\%zip%-odXihBhRVpA4
 set r=%cd%\..\robocopy.exe
