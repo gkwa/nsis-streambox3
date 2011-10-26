@@ -21,19 +21,18 @@ set f=nsis-2.46-Unicode-setup.exe
 cmd /c %f% /S
 
 :: remove nsis from user path first
-rem .\pathman /ru "%systemdrive%\Program Files\NSIS\Unicode"
-rem .\pathman /au "%systemdrive%\Program Files\NSIS\Unicode"
+.\pathman /ru "%programfiles%\NSIS\Unicode"
+.\pathman /ru "%programfiles%\NSIS"
 
 :: add nsis to user path
-.\pathman /ru "%systemdrive%\Program Files\NSIS"
-.\pathman /au "%systemdrive%\Program Files\NSIS"
+.\pathman /au "%programfiles%\NSIS"
 
 if not exist "%SystemRoot%\system32\robocopy.exe" ( copy robocopy.exe "%SystemRoot%\system32" )
 
 :: autoit install
 cmd /c autoit-v3-setup.exe /S
-.\pathman /ru "%systemdrive%\Program Files\AutoIt3\Aut2Exe"
-.\pathman /au "%systemdrive%\Program Files\AutoIt3\Aut2Exe"
+.\pathman /ru "%programfiles%\AutoIt3\Aut2Exe"
+.\pathman /au "%programfiles%\AutoIt3\Aut2Exe"
 
 cd nsis-plugins
 cmd /c setup.bat
