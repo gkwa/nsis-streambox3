@@ -158,7 +158,23 @@ $\r$\n\
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM cmd.exe'
 		Pop $0
 		sleep 2000
-		
+
+		DetailPrint "Searching for process 'StreamboxLivePro.exe'"
+		FindProcDLL::FindProc "StreamboxLivePro.exe"
+		IntCmp $R0 1 0 +5
+		DetailPrint "Stopping Streambox StreamboxLivePro.exe application"
+		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM StreamboxLivePro.exe'
+		Pop $0
+		sleep 2000
+
+		DetailPrint "Searching for process 'StreamboxLiveStd.exe'"
+		FindProcDLL::FindProc "StreamboxLiveStd.exe"
+		IntCmp $R0 1 0 +5
+		DetailPrint "Stopping Streambox StreamboxLiveStd.exe application"
+		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM StreamboxLiveStd.exe'
+		Pop $0
+		sleep 2000
+
 		DetailPrint "Searching for process 'Encoder3D.exe'"
 		FindProcDLL::FindProc "Encoder3D.exe"
 		IntCmp $R0 1 0 +5
