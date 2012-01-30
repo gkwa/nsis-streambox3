@@ -22,9 +22,9 @@
 	FileOpen $2 $0 r #$2 is file handle
 	IfErrors done
 	# I assume first line is current state (such as "File-based write filter configuration for the current session:)
-	FileRead $2 $3 
+	FileRead $2 $3
 	# I assume second line describes fbwf sate of current session (for example "    filter state: enabled."
-	FileRead $2 $3 
+	FileRead $2 $3
 #  RECaptureMatches RESULT PATTERN SUBJECT PARTIAL
 	${RECaptureMatches} $R1 "(.*enabled)" "$3" 1
 	${If} $R1 > 0
@@ -93,7 +93,7 @@ $\r$\n\
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM cmd.exe'
 		Pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'QTInfo.exe'"
 		FindProcDLL::FindProc QTInfo.exe
 		IntCmp $R0 1 0 +5
@@ -101,7 +101,7 @@ $\r$\n\
 		nsExec::ExecToStack "taskkill /F /IM QTInfo.exe"
 		pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'SMSMonitor.exe'"
 		FindProcDLL::FindProc SMSMonitor.exe
 		IntCmp $R0 1 0 +5
@@ -109,7 +109,7 @@ $\r$\n\
 		nsExec::ExecToStack "taskkill /F /IM SMSMonitor.exe"
 		pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'StreamboxMP.exe'"
 		FindProcDLL::FindProc StreamboxMP.exe
 		IntCmp $R0 1 0 +5
@@ -117,7 +117,7 @@ $\r$\n\
 		nsExec::ExecToStack "taskkill /F /IM StreamboxMP.exe"
 		pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'StreamboxMPHD.exe'"
 		FindProcDLL::FindProc StreamboxMPHD.exe
 		IntCmp $R0 1 0 +5
@@ -125,7 +125,7 @@ $\r$\n\
 		nsExec::ExecToStack "taskkill /F /IM StreamboxMPHD.exe"
 		pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'sms1.exe'"
 		FindProcDLL::FindProc sms1.exe
 		IntCmp $R0 1 0 +5
@@ -133,7 +133,7 @@ $\r$\n\
 		nsExec::ExecToStack "taskkill /F /IM sms1.exe"
 		pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'sms.exe'"
 		FindProcDLL::FindProc sms.exe
 		IntCmp $R0 1 0 +5
@@ -141,7 +141,7 @@ $\r$\n\
 		nsExec::ExecToStack "taskkill /F /IM sms.exe"
 		pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'QuickTimePlayer.exe'"
 		FindProcDLL::FindProc QuickTimePlayer.exe
 		IntCmp $R0 1 0 +5
@@ -149,7 +149,7 @@ $\r$\n\
 		nsExec::ExecToStack "taskkill /F /IM QuickTimePlayer.exe"
 		pop $0
 		sleep 2000
-		
+
 		# just to be sure, run cmd.exe kill again!
 		DetailPrint "Searching for process 'cmd.exe'"
 		FindProcDLL::FindProc "cmd.exe"
@@ -182,7 +182,7 @@ $\r$\n\
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM Encoder3D.exe'
 		Pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'Transport3D.exe'"
 		FindProcDLL::FindProc "Transport3D.exe"
 		IntCmp $R0 1 0 +5
@@ -198,7 +198,7 @@ $\r$\n\
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM Transcoder.exe'
 		Pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'Transport.exe'"
 		FindProcDLL::FindProc "Transport.exe"
 		IntCmp $R0 1 0 +5
@@ -206,7 +206,7 @@ $\r$\n\
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM Transport.exe'
 		Pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'transportSD-LS32.exe'"
 		FindProcDLL::FindProc "transportSD-LS32.exe"
 		IntCmp $R0 1 0 +5
@@ -214,7 +214,7 @@ $\r$\n\
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM transportSD-LS32.exe'
 		Pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'transportSD-LH32.exe'"
 		FindProcDLL::FindProc "transportSD-LH32.exe"
 		IntCmp $R0 1 0 +5
@@ -222,7 +222,7 @@ $\r$\n\
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM transportSD-LH32.exe'
 		Pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'transportHD-LH32.exe'"
 		FindProcDLL::FindProc "transportHD-LH32.exe"
 		IntCmp $R0 1 0 +5
@@ -230,7 +230,7 @@ $\r$\n\
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM transportHD-LH32.exe'
 		Pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'TransportHD32k.exe'"
 		FindProcDLL::FindProc "TransportHD32k.exe"
 		IntCmp $R0 1 0 +5
@@ -238,7 +238,7 @@ $\r$\n\
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM TransportHD32k.exe'
 		Pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'TransportSD-LH32.exe'"
 		FindProcDLL::FindProc "TransportSD-LH32.exe"
 		IntCmp $R0 1 0 +5
@@ -246,7 +246,7 @@ $\r$\n\
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM TransportSD-LH32.exe'
 		Pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'EncoderFD1_3_32p4-sd.exe'"
 		FindProcDLL::FindProc "EncoderFD1_3_32p4-sd.exe"
 		IntCmp $R0 1 0 +5
@@ -254,7 +254,7 @@ $\r$\n\
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM EncoderFD1_3_32p4-sd.exe'
 		Pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'EncoderFD1_3_32p4-hd.exe'"
 		FindProcDLL::FindProc "EncoderFD1_3_32p4-hd.exe"
 		IntCmp $R0 1 0 +5
@@ -262,7 +262,7 @@ $\r$\n\
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM EncoderFD1_3_32p4-hd.exe'
 		Pop $0
 		sleep 2000
-		
+
 		DetailPrint "Searching for process 'EncoderFD1_3.exe'"
 		FindProcDLL::FindProc "EncoderFD1_3.exe"
 		IntCmp $R0 1 0 +5
@@ -278,46 +278,46 @@ $\r$\n\
 
 !define LVM_GETITEMCOUNT 0x1004
 !define LVM_GETITEMTEXT 0x102D
- 
+
 Function DumpLog
-  Exch $5
-  Push $0
-  Push $1
-  Push $2
-  Push $3
-  Push $4
-  Push $6
- 
-  FindWindow $0 "#32770" "" $HWNDPARENT
-  GetDlgItem $0 $0 1016
-  StrCmp $0 0 exit
-  FileOpen $5 $5 "w"
-  StrCmp $5 "" exit
-    SendMessage $0 ${LVM_GETITEMCOUNT} 0 0 $6
-    System::Alloc ${NSIS_MAX_STRLEN}
-    Pop $3
-    StrCpy $2 0
-    System::Call "*(i, i, i, i, i, i, i, i, i) i \
-      (0, 0, 0, 0, 0, r3, ${NSIS_MAX_STRLEN}) .r1"
-    loop: StrCmp $2 $6 done
-      System::Call "User32::SendMessageA(i, i, i, i) i \
-        ($0, ${LVM_GETITEMTEXT}, $2, r1)"
-      System::Call "*$3(&t${NSIS_MAX_STRLEN} .r4)"
-      FileWrite $5 "$4$\r$\n"
-      IntOp $2 $2 + 1
-      Goto loop
-    done:
-      FileClose $5
-      System::Free $1
-      System::Free $3
-  exit:
-    Pop $6
-    Pop $4
-    Pop $3
-    Pop $2
-    Pop $1
-    Pop $0
-    Exch $5
+	Exch $5
+	Push $0
+	Push $1
+	Push $2
+	Push $3
+	Push $4
+	Push $6
+
+	FindWindow $0 "#32770" "" $HWNDPARENT
+	GetDlgItem $0 $0 1016
+	StrCmp $0 0 exit
+	FileOpen $5 $5 "w"
+	StrCmp $5 "" exit
+		SendMessage $0 ${LVM_GETITEMCOUNT} 0 0 $6
+		System::Alloc ${NSIS_MAX_STRLEN}
+		Pop $3
+		StrCpy $2 0
+		System::Call "*(i, i, i, i, i, i, i, i, i) i \
+			(0, 0, 0, 0, 0, r3, ${NSIS_MAX_STRLEN}) .r1"
+		loop: StrCmp $2 $6 done
+			System::Call "User32::SendMessageA(i, i, i, i) i \
+				($0, ${LVM_GETITEMTEXT}, $2, r1)"
+			System::Call "*$3(&t${NSIS_MAX_STRLEN} .r4)"
+			FileWrite $5 "$4$\r$\n"
+			IntOp $2 $2 + 1
+			Goto loop
+		done:
+			FileClose $5
+			System::Free $1
+			System::Free $3
+	exit:
+		Pop $6
+		Pop $4
+		Pop $3
+		Pop $2
+		Pop $1
+		Pop $0
+		Exch $5
 FunctionEnd
 
 !endif
