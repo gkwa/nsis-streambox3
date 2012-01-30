@@ -3,33 +3,37 @@
 
 !include NSISpcre.nsh
 
-# !insertmacro REMatches
-!insertmacro RESetOption
-!insertmacro REMatches
+!insertmacro un.RESetOption
+!insertmacro un.REMatches
 
+!macro determinIfWriteProtectIsOn Un
+	Function ${un}determinIfWriteProtectIsOn
 
-!macro determinIfWriteProtectIsOn
+		##############################
+		# determine if write protect is on/off
+		##############################
+		GetTempFileName $0
+		nsExec::ExecToStack '"$SYSDIR\cmd" /c \
+			$SYSDIR\fbwfmgr.exe /displayconfig 2>&1 > $0' $1
+	# File-based write filter is not enabled for the current session.
 
-	##############################
-	# determine if write protect is on/off
-	##############################
-	GetTempFileName $0
-	nsExec::ExecToStack '"$SYSDIR\cmd" /c \
-		$SYSDIR\fbwfmgr.exe /displayconfig 2>&1 > $0' $1
-# File-based write filter is not enabled for the current session.
+		ClearErrors
+		FileOpen $2 $0 r #$2 is file handle
+		IfErrors done
+		# I assume first line is current state (such as "File-based write filter configuration for the current session:)
+		FileRead $2 $3
+		# I assume second line describes fbwf sate of current session (for example "    filter state: enabled."
+		FileRead $2 $3
+	#  RECaptureMatches RESULT PATTERN SUBJECT PARTIAL
 
-	ClearErrors
-	FileOpen $2 $0 r #$2 is file handle
-	IfErrors done
-	# I assume first line is current state (such as "File-based write filter configuration for the current session:)
-	FileRead $2 $3
-	# I assume second line describes fbwf sate of current session (for example "    filter state: enabled."
-	FileRead $2 $3
-#  RECaptureMatches RESULT PATTERN SUBJECT PARTIAL
-	${RECaptureMatches} $R1 "(.*enabled)" "$3" 1
-	${If} $R1 > 0
-			FileOpen $R1 $WINDIR\temp\disable_write_protect_for_install.bat  w
-					FileWrite $R1 '\
+		!ifdef __UNINSTALL__
+			!insertmacro un.RECaptureMatchesCall $R1 "(.*enabled)" "$3" 1
+		!else
+			!insertmacro RECaptureMatchesCall $R1 "(.*enabled)" "$3" 1
+		!endif
+		${If} $R1 > 0
+				FileOpen $R1 $WINDIR\temp\disable_write_protect_for_install.bat  w
+						FileWrite $R1 '\
 @echo off$\r$\n\
 ECHO Write Protect OFF$\r$\n\
 ECHO This will allow files on the System Drive to be changed$\r$\n\
@@ -57,20 +61,19 @@ PAUSE$\r$\n\
 exit$\r$\n\
 $\r$\n\
 '
-			FileClose $R1
-			SetShellVarContext all
-			CreateShortCut "$DESKTOP\Disable Write Protect.lnk" $WINDIR\temp\disable_write_protect_for_install.bat
-		MessageBox MB_ICONSTOP \
-		"I can't continue with FBWF write filter turned on.  In order to continue, you must disable the \
-			drive write protect, reboot and retry the install.   In order to disable drive write protect \
-			you can run the $\"Disable Write Protect$\" shortcut on the desktop."
-		Abort
-	${EndIf}
-	FileClose $2
-	done:
-
+				FileClose $R1
+				SetShellVarContext all
+				CreateShortCut "$DESKTOP\Disable Write Protect.lnk" $WINDIR\temp\disable_write_protect_for_install.bat
+			MessageBox MB_ICONSTOP \
+			"I can't continue with FBWF write filter turned on.  In order to continue, you must disable the \
+				drive write protect, reboot and retry the install.   In order to disable drive write protect \
+				you can run the $\"Disable Write Protect$\" shortcut on the desktop."
+			Abort
+		${EndIf}
+		FileClose $2
+		done:
+	FunctionEnd
 !macroend
-
 
 ##############################
 # KillRunningStreamboxApps
