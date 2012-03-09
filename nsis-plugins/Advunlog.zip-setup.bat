@@ -9,9 +9,11 @@ set r=%cd%\..\robocopy.exe
 mkdir "%stage%"
 .\unzip -q -n "%zip%" -d "%stage%"
 
-cd "%programfiles%\NSIS"
+set pf=%ProgramFiles%
+if not "%ProgramFiles(x86)%"=="" set pf="%ProgramFiles(x86)%"
+cd "%pf%\NSIS"
 
-if exist Plugins\nul ( %r% "%stage%" "%programfiles%\NSIS" /e /s )
-if exist Unicode\nul ( %r% "%stage%" "%programfiles%\NSIS\Unicode" /e /s )
+if exist Plugins\nul ( %r% "%stage%" "%pf%\NSIS" /e /s )
+if exist Unicode\nul ( %r% "%stage%" "%pf%\NSIS\Unicode" /e /s )
 
 rmdir /q/s "%stage%"

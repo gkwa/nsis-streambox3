@@ -8,14 +8,16 @@ set stage=%cd%\%zip%-odXihBhRVpA4
 mkdir "%stage%"
 .\unzip -q -n NSIS_Simple_Firewall_Plugin_1.18.zip -d "%stage%"
 
-cd "%programfiles%\NSIS"
+set pf=%ProgramFiles%
+if not "%ProgramFiles(x86)%"=="" set pf="%ProgramFiles(x86)%"
+cd "%pf%\NSIS"
 
 if exist Unicode\Plugins\nul (
-	copy /y "%stage%\SimpleFC.dll" "%programfiles%\NSIS\Unicode\Plugins"
+	copy /y "%stage%\SimpleFC.dll" "%pf%\NSIS\Unicode\Plugins"
 )
 
 if exist Plugins\nul (
-	copy /y "%stage%\SimpleFC.dll" "%programfiles%\NSIS\Plugins"
+	copy /y "%stage%\SimpleFC.dll" "%pf%\NSIS\Plugins"
 )
 
 rmdir /q/s "%stage%"

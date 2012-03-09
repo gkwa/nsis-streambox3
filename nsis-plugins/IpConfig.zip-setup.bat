@@ -9,19 +9,21 @@ set r=%cd%\..\robocopy.exe
 mkdir "%stage%"
 .\unzip -q -n "%zip%" -d "%stage%"
 
-cd "%programfiles%\NSIS"
+set pf=%ProgramFiles%
+if not "%ProgramFiles(x86)%"=="" set pf="%ProgramFiles(x86)%"
+cd "%pf%\NSIS"
 
 
 if exist Unicode\Plugins\nul (
-	copy /y "%stage%\Unicode\Plugins\IpConfig.dll" "%programfiles%\NSIS\Unicode\Plugins"
-	%r% /e "%stage%\Examples" "%programfiles%\NSIS\Unicode\Examples"
-	%r% /e "%stage%\Docs" "%programfiles%\NSIS\Unicode\Docs"
+	copy /y "%stage%\Unicode\Plugins\IpConfig.dll" "%pf%\NSIS\Unicode\Plugins"
+	%r% /e "%stage%\Examples" "%pf%\NSIS\Unicode\Examples"
+	%r% /e "%stage%\Docs" "%pf%\NSIS\Unicode\Docs"
 )
 
 if exist Plugins\nul (
-	copy /y "%stage%\Plugins\IpConfig.dll" "%programfiles%\NSIS\Plugins"
-	%r% /e "%stage%\Examples" "%programfiles%\NSIS\Examples"
-	%r% /e "%stage%\Docs" "%programfiles%\NSIS\Docs"
+	copy /y "%stage%\Plugins\IpConfig.dll" "%pf%\NSIS\Plugins"
+	%r% /e "%stage%\Examples" "%pf%\NSIS\Examples"
+	%r% /e "%stage%\Docs" "%pf%\NSIS\Docs"
 )
 
 rmdir /q/s "%stage%"
