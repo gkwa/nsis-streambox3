@@ -8,7 +8,7 @@ mkdir %stage%
 .\unzip -q -n Xml.zip -d "%stage%"
 
 set pf=%ProgramFiles%
-if not "%ProgramFiles(x86)%"=="" set pf="%ProgramFiles(x86)%"
+if not "%ProgramFiles(x86)%"=="" set pf=%ProgramFiles(x86)%
 cd "%pf%\NSIS"
 
 if exist Unicode\Plugins\nul (

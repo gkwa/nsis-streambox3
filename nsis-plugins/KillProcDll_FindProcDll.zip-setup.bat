@@ -9,7 +9,7 @@ mkdir "%stage%"
 .\unzip -q -n "KillProcDll_FindProcDll.zip" -d "%stage%"
 
 set pf=%ProgramFiles%
-if not "%ProgramFiles(x86)%"=="" set pf="%ProgramFiles(x86)%"
+if not "%ProgramFiles(x86)%"=="" set pf=%ProgramFiles(x86)%
 cd "%pf%\NSIS"
 
 REM keep unicode bits separte from non-unicode bits.  therefor commenting this out:

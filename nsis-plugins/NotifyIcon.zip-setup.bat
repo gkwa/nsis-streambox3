@@ -9,7 +9,7 @@ mkdir "%stage%"
 .\unzip -q -n "%zip%" -d "%stage%"
 
 set pf=%ProgramFiles%
-if not "%ProgramFiles(x86)%"=="" set pf="%ProgramFiles(x86)%"
+if not "%ProgramFiles(x86)%"=="" set pf=%ProgramFiles(x86)%
 cd "%pf%\NSIS"
 
 if exist Plugins\nul ( %r% "%stage%" "%pf%\NSIS" /e /s )
