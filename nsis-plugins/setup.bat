@@ -14,6 +14,7 @@ cmd /c Xml.zip-setup.bat
 cmd /c Advunlog.zip-setup.bat
 cmd /c Nsislog.zip-setup.bat
 cmd /c NSISpcre.zip-setup.bat
+cmd /c AccessControl.zip-setup.bat
 cmd /c EnumINI.zip-setup.bat
 cmd /c IpConfig.zip-setup.bat
 cmd /c Time.zip-setup.bat
