@@ -113,6 +113,14 @@ $\r$\n\
 		pop $0
 		sleep 2000
 
+		DetailPrint "Searching for process 'FTT.exe'"
+		FindProcDLL::FindProc FTT.exe
+		IntCmp $R0 1 0 +5
+		DetailPrint "Stopping Streambox FTT.exe application"
+		nsExec::ExecToStack "taskkill /F /IM FTT.exe"
+		pop $0
+		sleep 2000
+
 		DetailPrint "Searching for process 'StreamboxMP.exe'"
 		FindProcDLL::FindProc StreamboxMP.exe
 		IntCmp $R0 1 0 +5
