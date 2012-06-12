@@ -170,19 +170,19 @@ $\r$\n\
 		Pop $0
 		sleep 2000
 
+		DetailPrint "Searching for process 'StreamboxLive.exe'"
+		FindProcDLL::FindProc "StreamboxLive.exe"
+		IntCmp $R0 1 0 +5
+		DetailPrint "Stopping Streambox StreamboxLive.exe application"
+		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM StreamboxLive.exe'
+		Pop $0
+		sleep 2000
+
 		DetailPrint "Searching for process 'StreamboxLivePro.exe'"
 		FindProcDLL::FindProc "StreamboxLivePro.exe"
 		IntCmp $R0 1 0 +5
 		DetailPrint "Stopping Streambox StreamboxLivePro.exe application"
 		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM StreamboxLivePro.exe'
-		Pop $0
-		sleep 2000
-
-		DetailPrint "Searching for process 'StreamboxLiveStd.exe'"
-		FindProcDLL::FindProc "StreamboxLiveStd.exe"
-		IntCmp $R0 1 0 +5
-		DetailPrint "Stopping Streambox StreamboxLiveStd.exe application"
-		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM StreamboxLiveStd.exe'
 		Pop $0
 		sleep 2000
 
