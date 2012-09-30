@@ -97,6 +97,14 @@ $\r$\n\
 		Pop $0
 		sleep 2000
 
+		DetailPrint "Searching for process 'windirstat.exe'"
+		FindProcDLL::FindProc "windirstat.exe"
+		IntCmp $R0 1 0 +5
+		DetailPrint "Stopping windirstat.exe application"
+		nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM windirstat.exe'
+		Pop $0
+		sleep 2000
+
 		DetailPrint "Searching for process 'QTInfo.exe'"
 		FindProcDLL::FindProc QTInfo.exe
 		IntCmp $R0 1 0 +5
