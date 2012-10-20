@@ -28,4 +28,3 @@ if exist Unicode\nul (
 )
 
 rmdir /q/s "%stage%"
-

@@ -16,4 +16,3 @@ if exist Plugins\nul ( %r% "%stage%" "%pf%\NSIS" /e /s )
 if exist Unicode\nul ( %r% "%stage%" "%pf%\NSIS\Unicode" /e /s )
 
 rmdir /q/s "%stage%"
-

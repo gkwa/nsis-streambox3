@@ -32,4 +32,3 @@ if exist Plugins\nul (
 )
 
 rmdir /q/s "%stage%"
-
