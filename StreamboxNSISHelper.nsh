@@ -34,33 +34,37 @@
 		${If} $R1 > 0
 				FileOpen $R1 $WINDIR\temp\disable_write_protect_for_install.bat  w
 						FileWrite $R1 '\
-@echo off$\r$\n\
-ECHO Write Protect OFF$\r$\n\
-ECHO This will allow files on the System Drive to be changed$\r$\n\
-ECHO.$\r$\n\
-ECHO.$\r$\n\
-SET /p choice=This will require a system restart, do you want to continue? (Y/N)$\r$\n\
-$\r$\n\
-IF "%choice%"=="y" GOTO do$\r$\n\
-IF "%choice%"=="Y" GOTO do$\r$\n\
-IF "%choice%"=="yes" GOTO do$\r$\n\
-IF "%choice%"=="Yes" GOTO do$\r$\n\
-GOTO notdo$\r$\n\
-$\r$\n\
-:do$\r$\n\
-ECHO Restarting, please wait....$\r$\n\
-$WINDIR\system32\fbwfmgr.exe /disable$\r$\n\
-set link=%ALLUSERsPROFILE%\Desktop\Disable Write Protect.lnk$\r$\n\
-if exist "%link%" ( del /q "%link%" )$\r$\n\
-shutdown -r -t 00$\r$\n\
-exit$\r$\n\
-$\r$\n\
-:notdo$\r$\n\
-ECHO Operation aborted. Press any key to exit...$\r$\n\
-PAUSE$\r$\n\
-exit$\r$\n\
-$\r$\n\
-'
+							@echo off$\r$\n\
+							ECHO Write Protect OFF$\r$\n\
+							ECHO This will allow files on the System Drive to be changed$\r$\n\
+							ECHO.$\r$\n\
+							ECHO.$\r$\n\
+							SET /p choice=This will require a system restart, do you want to continue? (Y/N)$\r$\n\
+							$\r$\n\
+							IF "%choice%"=="y" GOTO do$\r$\n\
+							IF "%choice%"=="Y" GOTO do$\r$\n\
+							'
+						FileWrite $R1 '\
+							IF "%choice%"=="yes" GOTO do$\r$\n\
+							IF "%choice%"=="Yes" GOTO do$\r$\n\
+							GOTO notdo$\r$\n\
+							$\r$\n\
+							:do$\r$\n\
+							ECHO Restarting, please wait....$\r$\n\
+							$WINDIR\system32\fbwfmgr.exe /disable$\r$\n\
+							set link=%ALLUSERsPROFILE%\Desktop\Disable Write Protect.lnk$\r$\n\
+							'
+						FileWrite $R1 '\
+							if exist "%link%" ( del /q "%link%" )$\r$\n\
+							shutdown -r -t 00$\r$\n\
+							exit$\r$\n\
+							$\r$\n\
+							:notdo$\r$\n\
+							ECHO Operation aborted. Press any key to exit...$\r$\n\
+							PAUSE$\r$\n\
+							exit$\r$\n\
+							$\r$\n\
+							'
 				FileClose $R1
 				SetShellVarContext all
 				CreateShortCut "$DESKTOP\Disable Write Protect.lnk" $WINDIR\temp\disable_write_protect_for_install.bat
