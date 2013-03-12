@@ -163,10 +163,11 @@
 	!endif
 !macroend
 
-!define LVM_GETITEMCOUNT 0x1004
-!define LVM_GETITEMTEXT 0x102D
-
 !macro DumpLog Un
+
+	!define LVM_GETITEMCOUNT 0x1004
+	!define LVM_GETITEMTEXT 0x102D
+
 	Function ${Un}DumpLog
 		Exch $5
 		Push $0
