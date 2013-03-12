@@ -6,6 +6,58 @@
 !include NSISpcre.nsh
 
 # #############################
+# KillProcess
+# #############################
+
+!macro killProcessCall PROCESS_NAME
+	Push '${PROCESS_NAME}'
+	Call killProcess
+!macroend
+
+!macro un.killProcessCall PROCESS_NAME
+	Push '${PROCESS_NAME}'
+	Call un.killProcess
+!macroend
+
+!macro killProcess
+	!ifndef ${_StreamboxNSISHelper_UN}killProcess
+		!define ${_StreamboxNSISHelper_UN}killProcess `!insertmacro ${_StreamboxNSISHelper_UN}killProcessCall`
+
+		Function ${_StreamboxNSISHelper_UN}killProcess
+
+			Exch $0
+
+			IfFileExists $SYSDIR\taskkill.exe +2
+				File /oname=$SYSDIR\taskkill.exe nsis-streambox2\taskkill.exe
+
+			DetailPrint "Searching for process '$0'"
+			FindProcDLL::FindProc "$0"
+			IntCmp $R0 1 0 +5
+			DetailPrint "Stopping $0 application"
+			nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM "$0"'
+			Pop $0
+			sleep 2000
+
+			Exch $0
+
+		FunctionEnd
+	!endif
+!macroend
+
+!macro un.killProcess
+	!ifndef un.killProcess
+
+		!undef _StreamboxNSISHelper_UN
+		!define _StreamboxNSISHelper_UN `un.`
+
+		!insertmacro killProcess
+
+		!undef _StreamboxNSISHelper_UN
+		!define _StreamboxNSISHelper_UN
+	!endif
+!macroend
+
+# #############################
 # determinIfWriteProtectIsOn
 # #############################
 
