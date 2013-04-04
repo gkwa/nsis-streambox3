@@ -32,11 +32,14 @@
 
 			DetailPrint "Searching for process '$0'"
 			FindProcDLL::FindProc "$0"
-			IntCmp $R0 1 0 +5
-			DetailPrint "Stopping $0 application"
-			nsExec::ExecToStack '$SYSDIR\taskkill.exe /F /IM "$0"'
-			Pop $0
-			sleep 2000
+			!define UniqueID ${__LINE__}
+				IntCmp $R0 1 0 jump_${UniqueID}
+				DetailPrint "Stopping $0 application"
+				${nsProcess::KillProcess} '$0'
+				Pop $0
+				sleep 2000
+			jump_${UniqueID}:
+			!undef UniqueID
 
 			Exch $0
 
