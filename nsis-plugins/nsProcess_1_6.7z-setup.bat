@@ -50,7 +50,7 @@ REM     The process name is case-insensitive
 REM     Win95/98/ME/NT/2000/XP/Win7 support
 REM     Finds processes of other user(s) when running 'as Administrator' or when having switched to another user
 REM     Small plugin size (4 Kb)
-REM     NSIS UNICODE support (just rename nsProcessW.dll into nsProcess.dll) 
+REM     NSIS UNICODE support (just rename nsProcessW.dll into nsProcess.dll)
 
 REM [edit] Thanks
 
