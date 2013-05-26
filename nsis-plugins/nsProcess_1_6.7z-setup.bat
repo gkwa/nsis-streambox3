@@ -17,7 +17,13 @@ if not "%ProgramFiles(x86)%"=="" set pf=%ProgramFiles(x86)%
 %SystemDrive% && cd "%pf%\NSIS"
 
 if exist Plugins\nul ( %r% "%stage%" "%pf%\NSIS" /e /s )
-if exist Unicode\nul ( %r% "%stage%" "%pf%\NSIS\Unicode" /e /s )
+if exist Unicode\nul (
+   %r% "%stage%" "%pf%\NSIS\Unicode" /e /s
+   del /F "%pf%\NSIS\Unicode\Plugins\nsProcess.dll"
+   rem NSIS UNICODE support (just rename nsProcessW.dll into nsProcess.dll)
+   move "%pf%\NSIS\Unicode\Plugins\nsProcessW.dll" ^
+	"%pf%\NSIS\Unicode\Plugins\nsProcess.dll"
+)
 
 rmdir /q/s "%stage%"
 
