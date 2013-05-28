@@ -25,21 +25,23 @@
 
 		Function ${_StreamboxNSISHelper_UN}killProcess
 
-			Exch $0
-
+			Exch $0 #store process name from caller in $0
+			Push $R0
+			Push $R1
 
 			DetailPrint "Searching for process '$0'"
-			FindProcDLL::FindProc "$0"
+			FindProcDLL::FindProc "$0" #stores in $R0 by default
 			!define UniqueID ${__LINE__}
 				IntCmp $R0 1 0 jump_${UniqueID}
 				DetailPrint "Stopping $0 application"
-				${nsProcess::KillProcess} '$0'
-				Pop $0
+				${nsProcess::KillProcess} '$0' $R1
 				sleep 2000
 			jump_${UniqueID}:
 			!undef UniqueID
 
-			Exch $0
+			Pop $R1
+			Pop $R0
+			Pop $0
 
 		FunctionEnd
 	!endif
