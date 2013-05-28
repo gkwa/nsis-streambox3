@@ -4,6 +4,7 @@
 !define _StreamboxNSISHelper_UN
 
 !include NSISpcre.nsh
+!include nsProcess.nsh
 
 # #############################
 # KillProcess
