@@ -27,8 +27,6 @@
 
 			Exch $0
 
-			IfFileExists $SYSDIR\taskkill.exe +2
-				File /oname=$SYSDIR\taskkill.exe nsis-streambox2\taskkill.exe
 
 			DetailPrint "Searching for process '$0'"
 			FindProcDLL::FindProc "$0"
