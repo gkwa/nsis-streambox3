@@ -77,11 +77,7 @@
 	!ifndef ${_StreamboxNSISHelper_UN}determinIfWriteProtectIsOn
 		!define ${_StreamboxNSISHelper_UN}determinIfWriteProtectIsOn `!insertmacro ${_StreamboxNSISHelper_UN}determinIfWriteProtectIsOnCall`
 
-		!ifdef __UNINSTALL__
-			!insertmacro un.REMatches
-		!else
-			!insertmacro REMatches
-		!endif
+		!insertmacro ${_StreamboxNSISHelper_UN}REMatches
 
 		Function ${_StreamboxNSISHelper_UN}determinIfWriteProtectIsOn
 
