@@ -24,16 +24,20 @@ cmd /c %f% /S
 :: remove nsis from user path first
 .\pathman /ru "%programfiles%\NSIS\Unicode"
 .\pathman /ru "%programfiles%\NSIS"
+.\pathman /ru "%programfiles(x86)%\NSIS"
 
 :: add nsis to user path
 .\pathman /au "%programfiles%\NSIS"
+.\pathman /au "%programfiles(x86)%\NSIS"
 
 if not exist "%SystemRoot%\system32\robocopy.exe" ( copy robocopy.exe "%SystemRoot%\system32" )
 
 :: autoit install
 cmd /c autoit-v3-setup.exe /S
 .\pathman /ru "%programfiles%\AutoIt3\Aut2Exe"
+.\pathman /ru "%programfiles(x86)%\AutoIt3\Aut2Exe"
 .\pathman /au "%programfiles%\AutoIt3\Aut2Exe"
+.\pathman /au "%programfiles(x86)%\AutoIt3\Aut2Exe"
 
 cd nsis-plugins
 cmd /c setup.bat
