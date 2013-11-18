@@ -1,6 +1,7 @@
 @Echo on
 REM -*- bat -*-
 
+curl -O http://installer-bin.streambox.com/7z920.msi
 curl -O http://installer-bin.streambox.com/7za.exe
 curl -O http://installer-bin.streambox.com/autoit-v3-setup.exe
 curl -O http://installer-bin.streambox.com/handle.exe
@@ -38,6 +39,8 @@ cmd /c autoit-v3-setup.exe /S
 .\pathman /ru "%programfiles(x86)%\AutoIt3\Aut2Exe"
 .\pathman /au "%programfiles%\AutoIt3\Aut2Exe"
 .\pathman /au "%programfiles(x86)%\AutoIt3\Aut2Exe"
+
+cmd /c msiexec /L*v %windir%\temp\7z_install.log /qn /I 7z920.msi
 
 cd nsis-plugins
 cmd /c setup.bat
