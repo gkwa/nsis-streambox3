@@ -37,8 +37,10 @@ if not exist "%SystemRoot%\system32\robocopy.exe" ( copy robocopy.exe "%SystemRo
 cmd /c autoit-v3-setup.exe /S
 .\pathman /ru "%programfiles%\AutoIt3\Aut2Exe"
 .\pathman /ru "%programfiles(x86)%\AutoIt3\Aut2Exe"
+.\pathman /ru "%programfiles(x86)%\AutoIt3"
 .\pathman /au "%programfiles%\AutoIt3\Aut2Exe"
 .\pathman /au "%programfiles(x86)%\AutoIt3\Aut2Exe"
+.\pathman /au "%programfiles(x86)%\AutoIt3"
 
 cmd /c msiexec /L*v %windir%\temp\7z_install.log /qn /I 7z920.msi
 
