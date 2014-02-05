@@ -23,3 +23,5 @@ cmd /c nsProcess_1_6.7z-setup.bat
 cmd /c SelfDel.zip-setup.bat
 cmd /c Shelllink.zip-setup.bat
 cmd /c Registry.zip-setup.bat
+cmd /c NSISList-Plugin.zip-setup.bat
+cmd /c NSISList-Unicode-plugin.zip-setup.bat
