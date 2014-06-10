@@ -42,7 +42,12 @@ cmd /c autoit-v3-setup.exe /S
 
 cmd /c msiexec /L*v %windir%\temp\7z_install.log /qn /I 7z920.msi
 
-cd nsis-plugins
-cmd /c setup.bat
+cd nsis-plugins && cmd /c setup.bat
+cd ..
+
+set pf=%ProgramFiles%
+if not "%ProgramFiles(x86)%"=="" set pf=%ProgramFiles(x86)%
+robocopy Graphics "%pf%\NSIS\Streambox\Graphics" /e /s
+robocopy Icons "%pf%\NSIS\Streambox\Icons" /e /s
 
 cmd /k "reg query hkcu\environment /v Path"
