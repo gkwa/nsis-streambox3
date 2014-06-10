@@ -49,5 +49,6 @@ set pf=%ProgramFiles%
 if not "%ProgramFiles(x86)%"=="" set pf=%ProgramFiles(x86)%
 robocopy Graphics "%pf%\NSIS\Streambox\Graphics" /e /s
 robocopy Icons "%pf%\NSIS\Streambox\Icons" /e /s
+robocopy Docs "%pf%\NSIS\Streambox\Docs" /e /s
 
 cmd /k "reg query hkcu\environment /v Path"
