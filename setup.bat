@@ -1,26 +1,24 @@
 @Echo on
 REM -*- bat -*-
 
+:: usage cmd /c setup.bat
+
 curl -O http://installer-bin.streambox.com/7z920.msi
 curl -O http://installer-bin.streambox.com/7za.exe
 curl -O http://installer-bin.streambox.com/autoit-v3-setup.exe
 curl -O http://installer-bin.streambox.com/handle.exe
-curl -O http://installer-bin.streambox.com/nsis-2.46-Unicode-setup.exe
-curl -O http://installer-bin.streambox.com/nsis-2.46-setup.exe
 curl -O http://installer-bin.streambox.com/sed-4.2-1-dep.zip
 curl -O http://installer-bin.streambox.com/sed-4.2-1-bin.zip
 
+set nsis=nsis-2.46-setup.exe
+curl -O http://installer-bin.streambox.com/%nsis%
+cmd /c %nsis% /S
+
 rem added unicode nsis which supports strings larger than 1024 bytes
 rem http://code.google.com/p/unsis
-
-:: usage cmd /c setup.bat
-
-
-set f=nsis-2.46-setup.exe
-cmd /c %f% /S
-
-set f=nsis-2.46-Unicode-setup.exe
-cmd /c %f% /S
+set nsis=nsis-2.46-Unicode-setup.exe
+curl -O http://installer-bin.streambox.com/%nsis%
+cmd /c %nsis% /S
 
 :: remove nsis from user path first
 .\pathman /ru "%programfiles%\NSIS\Unicode"
